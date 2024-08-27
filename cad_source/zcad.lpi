@@ -21,6 +21,7 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True/PM_V2"/>
+        <TextName Value="ZamTmn.ZCad.App"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
@@ -32,8 +33,8 @@
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="9"/>
       <RevisionNr Value="10"/>
-      <CharSet Value="0000"/>
-      <StringTable ProductVersion="0.0.0.0"/>
+      <CharSet Value="04B0"/>
+      <StringTable ProductVersion="0.9.20.0"/>
     </VersionInfo>
     <BuildModes Count="7">
       <Item1 Name="Default" Default="True"/>
@@ -106,6 +107,10 @@
               <CPPInline Value="False"/>
             </SyntaxOptions>
           </Parsing>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
           <Linking>
             <Debugging>
               <DebugInfoType Value="dsDwarf3"/>

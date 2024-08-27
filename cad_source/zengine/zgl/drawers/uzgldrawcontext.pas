@@ -22,38 +22,40 @@ uses uzepalette,uzbtypes,uzgldrawerabstract,uzeconsts,uzegeometry,uzegeometrytyp
 type
 TDrawHeplGeometry=procedure  of object;
 TDrawingContext=record
-                   VisibleActualy:TActulity;
-                   InfrustumActualy:TActulity;
-                   DRAWCOUNT:TActulity;
-                   SysLayer:Pointer;
-                   Zoom:Double;
-                   matrixs:tmatrixs;
-                   pcamera:PGDBBaseCamera;
-                   GlobalLTScale:Double;
-                   DrawHeplGeometryProc:TDrawHeplGeometry;
-                   ForeGroundColorIndex:Integer;
+                   VisibleActualy:     TActulity;
+                   InfrustumActualy:   TActulity;
+                   DRAWCOUNT:          TActulity;
+                   SysLayer:           Pointer;
+                   Zoom:               Double;
+                   matrixs:            tmatrixs;
+                   pcamera:            PGDBBaseCamera;
+                   GlobalLTScale:      Double;
+                   DrawHeplGeometryProc:      TDrawHeplGeometry;
+                   ForeGroundColorIndex:      Integer;
 end;
 TDContextOption=(DCODrawable);
 TDContextOptions=set of TDContextOption;
 PTDrawContext=^TDrawContext;
 TDrawContext=record
-                   DrawingContext:TDrawingContext;
-                   Subrender:Integer;
-                   Selected:Boolean;
-                   MaxDetail:Boolean;
-                   DrawMode:Boolean;
-                   LWDisplayScale:Integer{=2};
-                   DefaultLW:Integer{=25};
-                   OwnerLineWeight:SmallInt;
-                   OwnerColor:Integer;
-                   MaxWidth:Integer;
-                   ScrollMode:Boolean;
-                   drawer:TZGLAbstractDrawer;
-                   SystmGeometryDraw:boolean;
-                   SystmGeometryColor:TGDBPaletteColor;
-                   Options:TDContextOptions;
+                   DrawingContext:      TDrawingContext;
+                   Subrender:           Integer;
+                   Selected:            Boolean;
+                   MaxDetail:           Boolean;
+                   DrawMode:            Boolean;
+                   LWDisplayScale:      Integer{=2};
+                   DefaultLW:           Integer{=25};
+                   OwnerLineWeight:     SmallInt;
+                   OwnerColor:          Integer;
+                   MaxWidth:            Integer;
+                   ScrollMode:          Boolean;
+                   drawer:              TZGLAbstractDrawer;
+                   SystmGeometryDraw:   boolean;
+                   SystmGeometryColor:  TGDBPaletteColor;
+                   Options:             TDContextOptions;
              end;
+
 function CreateAbstractRC:TDrawContext;
+
 implementation
 function CreateAbstractRC:TDrawContext;
 begin

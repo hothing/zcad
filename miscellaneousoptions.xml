@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <MiscellaneousOptions>
+    <Version Value="3"/>
+    <BuildLazarusOptions>
+      <Profiles Count="4">
+        <Profile0 Name="Обычная IDE">
+          <LCLPlatform Value="gtk2"/>
+          <IdeBuildMode Value="Build"/>
+        </Profile0>
+        <Profile1 Name="IDE в режиме отладки">
+          <LCLPlatform Value="gtk2"/>
+          <IdeBuildMode Value="Build"/>
+          <Options Count="1">
+            <Item1 Value="-gw3 -gl -gh -gt -Co -Cr -Ci -Sa -Sy"/>
+          </Options>
+        </Profile1>
+        <Profile2 Name="IDE с оптимизацией">
+          <LCLPlatform Value="gtk2"/>
+          <IdeBuildMode Value="Build"/>
+          <Options Count="1">
+            <Item1 Value="-O3 -g- -Xs"/>
+          </Options>
+        </Profile2>
+        <Profile3 Name="Очистить + Собрать все">
+          <LCLPlatform Value="gtk2"/>
+          <IdeBuildMode Value="Clean All + Build"/>
+        </Profile3>
+      </Profiles>
+      <StaticAutoInstallPackages Count="2">
+        <Item1 Value="syneditdsgn"/>
+        <Item2 Value="zmath"/>
+      </StaticAutoInstallPackages>
+    </BuildLazarusOptions>
+  </MiscellaneousOptions>
+</CONFIG>
